@@ -30,7 +30,7 @@ client = OpenAI(api_key=openai_api_key)
 # Khởi tạo lời nhắn "system" để định hình hành vi mô hình.
 INITIAL_SYSTEM_MESSAGE = {
     "role": "system",
-    "content": (system),
+    "content": system,
 }
 
 # Khởi tạo lời nhắn ví dụ từ vai trò "assistant".
