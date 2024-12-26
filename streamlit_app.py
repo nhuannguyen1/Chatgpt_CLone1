@@ -5,13 +5,14 @@ from openai import OpenAI
 st.markdown(
     """
     <div style="text-align: center; margin-bottom: 20px;">
-        <img src="https://raw.githubusercontent.com/nhuannguyen1/chatbotnew1/refs/heads/main/logo.png" alt="Logo" style="width: 50px;">
+        <img src="https://raw.githubusercontent.com/nhuannguyen1/Chatgpt_clone2/refs/heads/main/logo1.png" alt="Logo" style="width: 50px;">
     </div>
     """,
     unsafe_allow_html=True
 )
 
-# Căn chỉnh tiêu đề vào giữa
+
+# Căn chỉnh tiêu đề vào giữa m
 st.markdown(
     """
     <h1 style="text-align: center;">Xin Chào, Mình Là Trợ Lý Pyan</h1>
