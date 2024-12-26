@@ -8,19 +8,9 @@ with open("requirements.txt", "r", encoding="utf-8") as file:
 print(content_sys)
 
 
-# Thêm logo ở trên cùng, căn giữa.
-st.markdown(
-    """
-    <div style="text-align: center; margin-bottom: 20px;">
-<<<<<<< HEAD
-        <img src="https://raw.githubusercontent.com/nhuannguyen1/Chatgpt_clone2/refs/heads/main/logo1.png" alt="Logo" style="width: 50px;">
-=======
-        <img src="logo.png" alt="Logo" style="width: 50px;">
->>>>>>> 88af525d425ead09cc16649c84934a33929ea8d3
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+with open("sys_xchao.txt", "r", encoding="utf-8") as file:
+    sys_xchao = file.read()
+print(sys_xchao)
 
 
 # Căn chỉnh tiêu đề vào giữa m
@@ -48,10 +38,7 @@ INITIAL_SYSTEM_MESSAGE = {
 # Khởi tạo lời nhắn ví dụ từ vai trò "assistant".
 INITIAL_ASSISTANT_MESSAGE = {
     "role": "assistant",
-    "content": (
-        "Mình ở đây để tư vấn khóa Tự Động Hóa Công Việc Với Python."
-        "\nBạn inbox nội dung cần tư vấn nhé"
-    ),
+    "content":sys_xchao,
 }
 
 # Khởi tạo lời nhắn ví dụ từ vai trò "user".
