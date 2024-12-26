@@ -1,11 +1,18 @@
 import streamlit as st
 from openai import OpenAI
 
+
+with open("requirements.txt", "r", encoding="utf-8") as file:
+    content_sys = file.read()
+
+print(content_sys)
+
+
 # Thêm logo ở trên cùng, căn giữa.
 st.markdown(
     """
     <div style="text-align: center; margin-bottom: 20px;">
-        <img src="https://raw.githubusercontent.com/nhuannguyen1/chatbotnew1/refs/heads/main/logo.png" alt="Logo" style="width: 50px;">
+        <img src="logo.png" alt="Logo" style="width: 50px;">
     </div>
     """,
     unsafe_allow_html=True
@@ -30,7 +37,7 @@ client = OpenAI(api_key=openai_api_key)
 # Khởi tạo lời nhắn "system" để định hình hành vi mô hình.
 INITIAL_SYSTEM_MESSAGE = {
     "role": "system",
-    "content": system,
+    "content": content_sys,
 }
 
 # Khởi tạo lời nhắn ví dụ từ vai trò "assistant".
